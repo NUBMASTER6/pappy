@@ -1,0 +1,20 @@
+<!-- myapp/templates/index.html -->
+{% load static %}  <!-- Load the static template tag library -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Link to CSS file using static tag -->
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <span id="typing-text"></span> <!-- Container for typing text -->
+        </div>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script> <!-- Link to JS file using static tag -->
+</body>
+</html>

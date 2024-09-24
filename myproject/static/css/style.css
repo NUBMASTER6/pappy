@@ -1,0 +1,31 @@
+/* static/css/style.css */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+.message {
+    font-size: 2em; /* Increase font size */
+    color: #333; /* Dark gray color for the text */
+}
+
+#typing-text {
+    border-right: 2px solid #333; /* Blinking cursor effect */
+    animation: blink 0.7s infinite step-end;
+}
+
+/* Keyframes for the blinking cursor */
+@keyframes blink {
+    from { border-color: transparent; }
+    to { border-color: #333; }
+}
