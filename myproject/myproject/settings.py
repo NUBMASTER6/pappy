@@ -29,6 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
 'pappy.onrender.com',
 'паппи.рф',
+"127.0.0.1",
+"xn--80aqtba.xn--p1ai"
 ]
 
 
