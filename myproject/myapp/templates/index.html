@@ -1,183 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Your existing head content -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Number Login</title>
-    <!-- Include the updated CSS here or in a separate file -->
-    <style>
-
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding-top: 70px; /* Adjust to the height of the header */
-    padding-bottom: 70px; /* Adjust to the height of the footer */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #dddddd;
-    padding: 15px 20px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    z-index: 1000; /* Ensure the header stays above other elements */
-    border-radius: 0px 0px 16px 16px;
-}
-
-.header .back-button {
-    margin-right: 10px;
-}
-
-.header h2 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.container {
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
-    padding: 20px;
-    box-sizing: border-box;
-    margin-bottom: 20px; /* Add margin to separate it from the footer */
-}
-
-.description {
-    color: #555555;
-    font-size: 14px;
-    margin-bottom: 32px;
-    font-size: 14px;
-}
-
-.input-container {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.input-container label {
-    font-size: 14px;
-    color: #555555;
-    margin-bottom: 5px;
-    display: block;
-}
-
-.input-container input {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #dddddd;
-    border-radius: 10px;
-    box-sizing: border-box;
-    outline: none;
-    transition: border-color 0.2s;
-}
-
-.input-container input:focus {
-    border-color: #007bff;
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    border-top: 1px solid #dddddd;
-    padding: 15px 20px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensure the footer stays above other elements */
-    border-radius: 16px 16px 0px 0px;
-}
-
-.submit-button {
-    width: 100%;
-    max-width: 400px;
-    padding: 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-.submit-button:hover {
-    background-color: #0056b3;
-}
-
-@media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 15px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Скоро на Паппи.рф</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow: hidden;
     }
-    .header h2,
-    .footer h2 {
-        font-size: 16px;
-    }
-    .description {
-        font-size: 13px;
-    }
-}
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0px 12px;
+    .logo {
+      position: absolute;
+      top: 20px;
+      width: 100px;
+      height: 100px;
+      background-image: url('https://downloader.disk.yandex.ru/preview/32970f90c080585e2c9171d95a44498d64fdd80655850568e0422fce7ef51deb/66f9ceb9/3G4zqvB02_nV558b4mvEnrSrqAtM6ruSZOUyB0abGp6YcmAcQKozyCtnw3gVaXX8M5BceCKsZKf2LD43WZPl9w%3D%3D?uid=0&filename=3-05.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2850x1430'); /* Replace with your logo */
+      background-size: contain;
+      background-repeat: no-repeat;
     }
-    .header h2,
-    .footer h2 {
-        font-size: 14px;
+
+    .main-content {
+      flex: 1; /* Take remaining space */
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .description {
-        font-size: 14px;
+
+    .typing-container {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
     }
-}
 
+    .cursor {
+      border-right: 2px solid #00f;
+      display: inline-block;
+      width: 2px;
+      animation: blink 0.7s step-end infinite;
+    }
 
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
 
-
-    </style>
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 14px;
+      color: #888;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <div class="back-button">
-            <img src="back-icon.png" alt="<" width="24">
-        </div>
-        <h2>Регистрация / Авторизация</h2>
-    </div>
-    <div class="container">
-        <h3 style="padding: 0px;margin: 12px 0px 8px;/*! margin-bottom: 10px; */font-size: 20px;font-weight: 400;">Вход по номеру телефона </h3>
-        <div class="description">
-            Введите свой номер телефона для авторизации.<br>
-            Если вы уже зарегистрированы – будет произведен вход.
-        </div>
-        <div class="input-container">
-            <label for="phone-number">Ваш номер телефона</label>
-            <input type="text" id="phone-number" placeholder="+7 (xxx) xxx-xx-xx">
-        </div>
-    </div>
-    <div class="footer">
-        <button class="submit-button">Продолжить</button>
-    </div>
 
+  <!-- Logo -->
+  <div class="logo"></div>
+
+  <!-- Main content for typing effect -->
+  <div class="main-content">
+    <div class="typing-container">
+      <span id="typing-text"></span><span class="cursor"></span>
+    </div>
+  </div>
+
+  <!-- Footer for Copyright -->
+  <footer>
+    &copy; 2024 Паппи. Все права защищены.
+  </footer>
+
+  <script>
+    const text = "Скоро...";
+    const typingElement = document.getElementById('typing-text');
+    let index = 0;
+
+    function typeLetter() {
+      if (index < text.length) {
+        typingElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeLetter, 150); // Adjust typing speed here
+      }
+    }
+
+    // Start typing when the page loads
+    window.onload = () => {
+      typeLetter();
+    };
+  </script>
 
 </body>
 </html>

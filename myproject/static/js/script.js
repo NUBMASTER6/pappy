@@ -1,19 +1,13 @@
-// static/js/script.js
-
-// The text to display with typing effect
-const text = "We will be here soon.";
-const typingSpeed = 100; // Typing speed in milliseconds
-
+const text = "Скоро...";
+const typingSpeed = 150; // Adjust speed if needed
 let index = 0;
 
-// Function to type the text
-function typeText() {
-    if (index < text.length) {
-        document.getElementById("typing-text").textContent += text.charAt(index);
-        index++;
-        setTimeout(typeText, typingSpeed); // Call the function again after delay
-    }
+function typeWriter() {
+  if (index < text.length) {
+    document.getElementById("coming-soon-text").innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeWriter, typingSpeed);
+  }
 }
 
-// Call the function to start typing when the page loads
-window.onload = typeText;
+window.onload = typeWriter;

@@ -1,31 +1,59 @@
-/* static/css/style.css */
-
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ffffff; /* White background */
+/* Reset margin, padding, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* White background */
+  font-family: 'Arial', sans-serif;
 }
 
-.message {
-    font-size: 2em; /* Increase font size */
-    color: #333; /* Dark gray color for the text */
+.coming-soon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-#typing-text {
-    border-right: 2px solid #333; /* Blinking cursor effect */
-    animation: blink 0.7s infinite step-end;
+.logo {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  margin-top: 20px;
+  object-fit: cover;
 }
 
-/* Keyframes for the blinking cursor */
+#coming-soon-text {
+  font-size: 48px;
+  color: #000000; /* Black text */
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 40px; /* Adds some space between the logo and the text */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  animation: blink 0.7s step-end infinite; /* Typing cursor effect */
+  border-right: 4px solid #000000; /* Simulates typing cursor */
+  padding-right: 5px;
+}
+
+/* Typing cursor blink animation */
 @keyframes blink {
-    from { border-color: transparent; }
-    to { border-color: #333; }
+  0% {
+    border-color: #000000;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #000000;
+  }
 }
